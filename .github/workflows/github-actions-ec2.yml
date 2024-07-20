@@ -8,12 +8,12 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-  steps:
-    - name: "Checkout the files"
-      uses: actions/checkout@v2
-    - name: "Deploy to Server"
-      uses: easingthemes/ssh-deploy@main
-      env:
-        SSH_PRIVATE_KEY: ${{Secrets.EC2_KEY}}
-        REMOTE_HOST: ${{Secrets.EC2_HOST}}
-        REMOTE_USER: ${{Secrets.EC2_USER}}
+    steps:
+      - name: Checkout the files
+        uses: actions/checkout@v2
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{Secrets.EC2_KEY}}
+          REMOTE_HOST: ${{Secrets.EC2_HOST}}
+          REMOTE_USER: ${{Secrets.EC2_USER}}
