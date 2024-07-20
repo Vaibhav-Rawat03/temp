@@ -24,6 +24,6 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_KEY }}
           script: |
-            npm install
-            npm install pm2 -g
-            pm2 start index.js
+            sudo npm install
+            sudo npm install pm2 -g
+            sudo pm2 start index.js
