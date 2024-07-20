@@ -9,9 +9,9 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
   steps:
-    - name: Checkout the files
+    - name: "Checkout the files"
       uses: actions/checkout@v2
-    - name: Deploy to Server
+    - name: "Deploy to Server"
       uses: easingthemes/ssh-deploy@main
       env:
         SSH_PRIVATE_KEY: ${{Secrets.EC2_KEY}}
